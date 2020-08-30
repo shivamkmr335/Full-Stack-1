@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Implementation</title>
+    <link 
+    rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+    crossorigin="anonymous">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        @media(min-width:901px){
+            ul{
+                list-style: none;
+                width: 100%;
+                background-color: darkslategrey;
+                display: flex;
+                justify-content:space-evenly ;
+                margin:auto;
+                padding: 0px 20px;
+                position: fixed;
+                top: 0;
+            }
+            ul li{
+                padding: 8px 0px;
+                display: inline-block;
+            }
+            ul li a{
+                padding: 12px 0px;
+                display: block;
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                width:18vw;
+                text-align: center;
+            }
+            ul li a:hover{
+                background-color: whitesmoke;
+                color: black;
+            }
+
+            .top{
+                margin-top: 120px;
+                margin-bottom: 80px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height:100vh;
+                color:white;
+                font-size: 10vh;
+                padding: 20px;
+                background-color: black;
+            }
+            h1{
+                text-align: center;
+                font-size: 35px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .Team{
+                width: 100%;
+                float: left;
+                display: flex;
+                justify-content:space-evenly ;
+                margin-bottom: 35px;
+            }
+            .Team img{
+                border-radius: 50%;
+            }
+            .left{
+                width:48%;
+                float: left;
+                background-color: rgba(0,0,0,0.7);
+                color: white;
+                text-align: justify;
+                height: 100vh;
+                padding: 5px;
+                margin:10px;
+                margin-top:0px;
+                font-size: 20px;
+            }
+            .right{
+                width:48%;
+                float: right;
+                height:100vh;
+            }
+            .imag{
+                margin-top:0px;
+                height: 33%;
+                text-align: center;
+                font-size: 28px;
+                margin-bottom: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: bold;
+                padding:10px;
+                box-sizing: border-box;
+            }
+            .box {
+                    background-color: rgb(216, 210, 210);
+                    width:23vw;
+                    margin-left: 1.5vw;
+                    border-radius: 10px;
+                    padding: 5px;
+                    overflow: hidden;
+                    float:left;
+                }
+            .prac-6 a{  
+                    text-align: center;
+                    text-decoration: none;
+                    padding: 10px;
+                    border-radius: 8px;
+                    display: block;
+                    background-color: red;
+                    color: whitesmoke;
+                }
+            .prac-6 a:hover{
+                    background-color: blue;
+                }
+            .prac-6 img {
+                    width: 100%;
+                    height: 150px;
+                    border-radius: 10px;
+                    
+                }
+            .prac-6 h4{
+                    text-align: center;
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin-top: 10px;
+                    margin-bottom: 0px;
+                }
+            .prac-6 .text{
+                    text-align: justify;
+                }
+            
+            .footer{
+                text-align: center;
+                background-color: rgb(177, 142, 218);
+                padding:15px;
+            }
+        }
+        @media (min-width: 551px) and (max-width: 900px){
+
+            .show-btn,.hide-btn{
+                position: absolute;
+                top: 12px;
+                right: 30px;
+                color: white;
+                font-size:35px;
+
+            }
+            #chk{
+                opacity: 0;
+            }
+            
+            .hide-btn{
+            opacity:0;
+            }
+
+            #chk:checked ~ .sidebar{
+                right:0;
+            }
+
+            #chk:checked ~ .show-btn{
+                opacity:0;
+            }
+            #chk:checked ~ .hide-btn{
+                opacity: 1;
+                z-index: 10;
+            }
+            .topmost{
+                width:100%;
+                height: 63px;
+                background-color: darkslategrey;
+            }
+            .sidebar{
+            width:40%;
+            height:100%;
+            position: absolute;
+            top:0px;
+            right:-100%;
+            background-color: rgb(66, 64, 64);
+            }
+            .sidebar ul{
+                list-style: none;
+            }
+
+            .sidebar ul li a{
+                text-align: center;
+                display: block;
+                text-decoration:none;
+                color:white;
+                font-size:20px;
+                padding: 15px 25px;
+                transition: .35s;
+            }
+            .top{
+                margin-top: 57px;
+                margin-bottom: 80px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height:100vh;
+                color:white;
+                font-size: 10vh;
+                padding: 20px;
+                background-color: black;
+            }
+            h1{
+                text-align: center;
+                font-size: 35px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .Team{
+                width: 100%;
+                float: left;
+                margin-bottom: 35px;
+            }
+            .Team img{
+                width: 45%;
+                border-radius: 50%;
+                margin-left: 3vw;
+            }
+            .left{
+                width:48%;
+                float: left;
+                background-color: rgba(0,0,0,0.7);
+                color: white;
+                text-align: justify;
+                height: 100vh;
+                padding: 5px;
+                margin:10px;
+                margin-top:0px;
+                font-size: 20px;
+            }
+            .right{
+                width:48%;
+                float: right;
+                height:100vh;
+            }
+            .imag{
+                margin-top:0px;
+                height: 33%;
+                text-align: center;
+                font-size: 28px;
+                margin-bottom: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: bold;
+                padding:10px;
+                box-sizing: border-box;
+            }
+            .box {
+                    background-color: white;
+                    margin-left:25px;
+                    width:45%;
+                    border-radius: 10px;
+                    padding: 15px;
+                    float: left;
+                }
+            .prac-6 a{  
+                    text-align: center;
+                    text-decoration: none;
+                    padding: 10px;
+                    border-radius: 8px;
+                    display: block;
+                    background-color: red;
+                    color: whitesmoke;
+                }
+            .prac-6 a:hover{
+                    background-color: blue;
+                }
+            .prac-6 img {
+                    width: 100%;
+                    height: 150px;
+                    border-radius: 10px;
+                    
+                }
+            .prac-6 h4{
+                    text-align: center;
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin-top: 10px;
+                    margin-bottom: 0px;
+                }
+            .prac-6 .text{
+                    text-align: justify;
+                }
+            
+            .footer{
+                text-align: center;
+                background-color: rgb(177, 142, 218);
+                padding:15px;
+                clear: both;
+                
+            }
+        }
+        @media(max-width:550px){
+            .show-btn,.hide-btn{
+                position: absolute;
+                top: 12px;
+                right: 30px;
+                color: white;
+                font-size:35px;
+
+            }
+            #chk{
+                opacity: 0;
+            }
+            
+            .hide-btn{
+            opacity:0;
+            }
+
+            #chk:checked ~ .sidebar{
+                right:0;
+            }
+
+            #chk:checked ~ .show-btn{
+                opacity:0;
+            }
+            #chk:checked ~ .hide-btn{
+                opacity: 1;
+                z-index: 10;
+            }
+            .topmost{
+                width:100%;
+                height: 63px;
+                background-color: darkslategrey;
+            }
+            .sidebar{
+            width:100%;
+            height:100%;
+            position: absolute;
+            top:0px;
+            right:-100%;
+            background-color: rgb(66, 64, 64);
+            }
+            .sidebar ul{
+                list-style: none;
+            }
+            .sidebar ul li a{
+                text-align: center;
+                display: block;
+                text-decoration:none;
+                color:white;
+                font-size:20px;
+                padding: 15px 25px;
+                transition: .35s;
+            }
+            .top{
+                margin-top: 57px;
+                margin-bottom: 80px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height:100vh;
+                color:white;
+                font-size: 10vh;
+                padding: 20px;
+                background-color: black;
+            }
+            h1{
+                text-align: center;
+                font-size: 35px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .Team{
+                width: 100%;
+                margin-bottom: 35px auto;
+            }
+            .Team img{
+                width:70%;
+                border-radius: 50%;
+                margin-left:15vw;
+            }
+            .left{
+                width:90%;
+                background-color: rgba(0,0,0,0.7);
+                color: white;
+                text-align: justify;
+                height: 80vh;
+                margin-top:20px;
+                font-size: 20px;
+                margin-left: 5vw;
+                overflow: hidden;
+                border-radius: 5px;
+            }
+            .left h2{
+                text-align:center;
+                padding:15px;
+            }
+            .right{
+                margin-top: 20px;
+                width:90%;
+                height:70vh;
+                margin-left: 5vw;
+
+            }
+            .right img{
+                border-radius: 10px;
+                border: 2px solid gray;
+            }
+            .imag{
+                margin-top:0px;
+                height: 33%;
+                text-align: center;
+                font-size: 28px;
+                margin-bottom: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: bold;
+                padding:10px;
+                box-sizing: border-box;
+            }
+            .box {
+                    background-color: rgb(214, 211, 211);
+                    margin-left:5vw;
+                    width:90%;
+                    margin-top:5vh;
+                    border-radius: 10px;
+                    padding:2vw;
+                }
+            .prac-6 a{  
+                    text-align: center;
+                    text-decoration: none;
+                    padding: 10px;
+                    border-radius: 8px;
+                    display: block;
+                    background-color: red;
+                    color: whitesmoke;
+                }
+            .prac-6 a:hover{
+                    background-color: blue;
+                }
+            .prac-6 img {
+                    width: 100%;
+                    height: 150px;
+                    border-radius: 10px;
+                    
+                }
+            .prac-6 h4{
+                    text-align: center;
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin-top: 10px;
+                    margin-bottom: 0px;
+                }
+            .prac-6 .text{
+                    text-align: justify;
+                }
+            .footer{
+                text-align: center;
+                background-color: rgb(177, 142, 218);
+                padding:15px
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topmost"></div>
+    <input type="checkbox" name="names" id="chk">
+    <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i>
+    </label>
+    
+    <div class="sidebar">
+
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#aboutus">ABOUT US</a></li>
+            <li><a href="#team">TEAM</a></li>
+            <li><a href="#technology">TECHNOLOGIES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="top" style="background-image: url('pics/emile-perron-xrVDYZRGdw4-unsplash.jpg');">
+        PRACTICAL-9
+    </div>
+    <div style="clear: both;height:100px"></div>
+    <h1 id="team">Team Members</h1>
+    <br>
+    <div class="Team">
+        <img src="pics/1.png" alt="beard">
+        <img src="pics/2.png" alt="cutie">
+        <img src="pics/3.png" alt="lady">
+        <img src="pics/9.png" alt="padhaku">
+    </div>
+    <div style="clear: both;height:100px"></div>
+    <h1 id="aboutus">ABOUT US</h1>
+    <div class="about">
+        <div class="left">
+            <h2>About Projects</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure laborum, quae voluptates praesentium repudiandae eaque sapiente veritatis et a totam, quos aperiam impedit delectus modi officiis doloribus nam nihil voluptatem quibusdam animi ab, facilis soluta? Magni officia, odit earum, amet, molestiae optio expedita fugit voluptatum dolorem molestias itaque eos sit labore eligendi? Molestias incidunt possimus fugit? Eius facere ab at vel illum esse quis voluptas minus debitis perspiciatis officiis voluptatum nulla, adipisci ea tempora rerum similique hic sit nesciunt provident totam sunt! Corrupti nulla quis ratione libero voluptatem numquam  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta, veniam, accusamus ratione autem mollitia molestias, amet laudantium ut nobis doloribus magni. Blanditiis quidem delectus voluptate atque, totam sapiente officia quisquam alias libero magnam.</p>
+        </div>
+        <div class="right">
+            <div class="imag" style="background-image: url('pics/p1.jpg');">
+                 <b>Project-1</b> 
+            </div>
+            <div class="imag" style="background-image: url('pics/p2.jpeg');">
+                <b>Project-2</b>
+            </div>
+            <div class="imag" style="background-image: url('pics/p3.jpg');">
+                <b>Project-3</b> 
+            </div>
+            
+        </div>
+    </div>
+    <div style="clear:both;height:100px"></div>
+    <h1 id="technology">Technologies Used</h1>
+    <div class="prac-6">
+        <div class="box">
+            <img src="html.jpg" alt="html pic" >
+            <h4>Introduction to HTML</h4>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab eos sapiente aspernatur quibusdam laudantium officia impedit quam, nesciunt totam voluptatibus deserunt repellat labore voluptatum. Harum blanditiis eveniet aut accusantium sunt a porro earum doloremque?</p>
+            <a href="html.html">Read More</a>
+        </div>
+        <div class="box">
+            <img src="css.jpg" alt="html pic" >
+            <h4>Introduction to CSS</h4>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab eos sapiente aspernatur quibusdam laudantium officia impedit quam, nesciunt totam voluptatibus deserunt repellat labore voluptatum. Harum blanditiis eveniet aut accusantium sunt a porro earum doloremque?</p>
+            <a href="css.html">Read More</a>
+        </div>
+        <div class="box">
+            <img src="javascript.png" alt="html pic" >
+            <h4>Introduction to JavaScript</h4>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab eos sapiente aspernatur quibusdam laudantium officia impedit quam, nesciunt totam voluptatibus deserunt repellat labore voluptatum. Harum blanditiis eveniet aut accusantium sunt a porro earum doloremque?</p>
+            <a href="js.html">Read More</a>
+        </div>
+        <div class="box">
+            <img src="bootstrap.jpg" alt="html pic" >
+            <h4>Introduction to Bootstrap</h4>
+            <p class="text">Lorem ip1sum dolor sit amet consectetur corrpti elit. Corrupti ab eos sapiente aspernatur quibusdam laudantium officia impedit quam, nesciunt totam voluptatibus deserunt repellat labore voluptatum. Harum blanditiis eveniet aut accusantium sunt a porro earum picdoloremque?</p>
+            <a href="bootstrap.html">Read More</a>
+        </div>
+    </div>
+    <div style="clear:both;height:100px"></div>
+    <h1 id="contact">Contact</h1>
+    <div class="footer">
+        <p>Website Template for Practical-8 <span><a href="https://www.Beta-labs.in">Beta-labs</a></span></p>
+        <p><a href="#top">Back to top</a></p>
+    </div>
+    
+</body>
+</html>

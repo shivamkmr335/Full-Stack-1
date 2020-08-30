@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link 
+    rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+    crossorigin="anonymous">
+
+    <style>
+
+        body{
+            background-color: white;
+        }
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #chk{
+            position:fixed;
+            top:0;
+            opacity: 0;
+        }
+        .hide-btn{
+            opacity:0;
+        }
+        #chk:checked ~ .sidebar{
+            left:0;
+        }
+        #chk:checked ~ .show-btn{
+            opacity:0;
+        }
+        #chk:checked ~ .hide-btn{
+            opacity: 1;
+        }
+        #chk:checked ~ .content{
+            border: 2px solid black;
+            width:80%;
+        }
+        .header{
+            margin-top:0px;
+            width:100%;
+            height:70px;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header img{
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+        }
+        .header h1{
+            color: white;
+            line-height: 70px;
+        }
+        .content{
+            width:100%;
+            padding:20px;
+            float: right;
+            transition: 0.7s ;
+        }
+        .content img{
+            width: 100%;
+            max-width:700px;
+            display:block;
+            margin:auto;
+        }
+        .content p{
+            text-align: justify;
+        }
+        li{
+            text-decoration: none;
+        }
+        .sidebar{
+            width:20%;
+            height:100%;
+            position: fixed;
+            top:70px;
+            left:0px;
+            background-color: rgb(19, 18, 18);
+            left: -100%;
+            transition: .4s;
+        }
+        .sidebar ul{
+            list-style: none;
+
+        }
+        .sidebar ul li{
+            border-bottom: 2px solid whitesmoke;
+        }
+        .sidebar ul li a{
+            display: block;
+            text-decoration:none;
+            color:white;
+            font-size:20px;
+            padding: 15px 25px;   
+        }
+        .sidebar ul li i{
+            margin-right: 15px;
+        }
+
+        .sidebar ul li a:hover{
+            border-left:10px solid white;
+            transition: .4s;
+        }
+        .social{
+            margin-top:220px;
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 30px;
+            border-top:2px solid whitesmoke;
+            padding: 10px 10px;
+        }
+        i{
+            font-size:40px;
+            color:white;
+        }
+        .show-btn,.hide-btn{
+            font-size:35px;
+            color:white;
+            position:fixed;
+            top:20px;
+            left:25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="cropped-fullstack-logo-full-colour-icon-only.webp" alt="full stack icon">
+        <h1>FULLSTACK</h1>
+    </div>
+    <input type="checkbox" name="names" id="chk">
+    <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i>
+    </label>
+    <div class="content" >
+        <img src="./pics/emile-perron-xrVDYZRGdw4-unsplash.jpg" alt="center pic">
+        <p>Lorem ipsum dolor sit amet consectetur adipisHomeicing elit. Facilis possimus placeat unde eaque officia eos beatae error debitis, quas similique dolorum incidunt earum repellat cupiditate tenetur suscipit. Doloribus in sapiente quibusdam iusto cumque molestiae magnam impedit. Eaque explicabo eius reiciendis consequatur modi? Fugiat labore sunt vitae sed voluptas maiores non numquam assumenda saepe quos deserunt iure cupiditate tempore laboriosam itaque error corrupti quis culpa, eum et? Suscipit vero accusantium repellat maxime laboriosam assumenda deserunt et rerum error ex, consequuntur eum, nobis, qui quos? Iure consequuntur possimus, incidunt numquam nam facilis maxime tempora! Blanditiis unde dolores iusto minima facere repellat reprehenderit similique dolore quo rem, officia illo, amet animi delectus atque. Atque quae, quos sint, perferendis consectetur accusantium praesentium quisquam aperiam eveniet, sit odio earum debitis rerum ducimus explicabo? Aperiam dolorem aut, doloremque quos pariatur vel possimus, cum, exercitationem ut qui voluptas. Dolorum perspiciatis totam aliquid voluptatum necessitatibus placeat soluta, adipisci vitae exercitationem tempore eos laborum ipsam odit, quam sit excepturi! In dignissimos iste, laboriosam blanditiis, ipsum illum, fugit atque error unde temporibus rem sit. Odio, illum ratione. Et voluptatem quod laboriosam debitis iure, modi eaque, perferendis repellat, repudiandae obcaecati fugiat earum nobis ut accusantium sed eos! Excepturi maiores et provident minima quidem autem ducimus architecto facere repellat eaque accusantium cum soluta eos, veniam laudantium aliquid doloribus! Quidem animi eaque vel maxime incidunt odit, quisquam ad unde, modi deleniti inventore. Repellat ullam ad quam amet quaerat nam et esse natus asperiores in dolorem est eum at suscipit, unde cum tempore. Sunt consequatur necessitatibus nostrum fuga placeat amet debitis. Aperiam in corporis voluptates totam odit cumque modi ullam accusamus qui molestias pariatur maiores libero ea nam voluptatum, explicabo nostrum a aliquam perspiciatis. Consequatur, alias iusto, ab inventore incidunt quibusdam iure dolorum aspernatur expedita dolorem omnis amet facilis consequuntur distinctio magni consectetur a, deleniti laboriosam autem beatae reiciendis. A ullam cumque vitae facilis vero. Soluta, nesciunt quaerat autem fugit dolorum quisquam. Quo quas, cupiditate voluptatibus eius voluptas facere consequatur in. Minus quas magni animi, repudiandae sint totam, vero blanditiis maxime laudantium, qui saepe rerum? Voluptas nisi necessitatibus, laudantium dolorem aut numquam perferendis aspernatur rem dolore et. Necessitatibus sed hic dolor, cum placeat, incidunt voluptatibus quibusdam corporis aliquid quasi quaerat. Voluptatem a similique nesciunt dolore officiis asperiores ullam inventore distinctio amet libero, harum voluptatibus est. Labore, soluta dignissimos corrupti itaque, deleniti ab repudiandae quasi consequuntur sunt mollitia pariatur debitis, minus magnam delectus perferendis atque in officiis reprehenderit fuga explicabo. Consequuntur repellendus impedit est, officia ipsam necessitatibus nostrum id dolorum, sed non totam mollitia officiis, ab maiores dolor nam eum ratione blanditiis sint corrupti quasi doloribus hic cum consequatur! Eaque, voluptate provident. Dolores quidem nam, atque, perferendis pariatur aspernatur quaerat ut hic reiciendis facere ullam eos magni! Mollitia dolor non exercitationem, iure tenetur similique impedit cum provident, modi, laudantium illum! Similique vel vitae quod optio beatae, velit dignissimos voluptas eius id nulla, voluptatem tempora accusantium iusto ut nihil commodi veritatis earum corrupti inventore ratione ad dolorum ipsum nisi libero. Nostrum perferendis reprehenderit et exercitationem debitis.</p>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li ><a href="#"><i class="fa fa-home"></i>Home</a></li>
+          
+            <li><a href="#"><i class="fa fa-user"></i>About</a></li>
+            
+            <li><a href="#"><i class="fa fa-tasks"></i>Services</a></li>
+            
+            <li><a href="#"><i class="fa fa-rss"></i>Blog</a></li>
+            
+            <li><a href="#"><i class="fa fa-id-card"></i>Contact</a></li>
+                    </ul>
+        <div class="social">
+            <a href=""><i class="fa fa-facebook-square"></i></a>
+            <a href=""><i class="fa fa-youtube-square"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+</body>
+</html>
