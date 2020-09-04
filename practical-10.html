@@ -22,12 +22,15 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         #chk{
-            position:fixed;
+            position:absolute;
             top:0;
             opacity: 0;
         }
         .hide-btn{
             opacity:0;
+        }
+        .hide-btn,.show-btn{
+            position:absolute;
         }
         #chk:checked ~ .sidebar{
             left:0;
@@ -39,7 +42,6 @@
             opacity: 1;
         }
         #chk:checked ~ .content{
-            border: 2px solid black;
             width:80%;
         }
         .header{
@@ -64,6 +66,7 @@
             width:100%;
             padding:20px;
             float: right;
+            border: none;
             transition: 0.7s ;
         }
         .content img{
@@ -81,7 +84,7 @@
         .sidebar{
             width:20%;
             height:100%;
-            position: fixed;
+            position: absolute;
             top:70px;
             left:0px;
             background-color: rgb(19, 18, 18);
@@ -130,7 +133,21 @@
             top:20px;
             left:25px;
         }
-
+        @media(max-width:700px) {
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+            .social-links {
+                margin-top: 200px;
+            }
+            .header h1 {
+                display: none;
+            }
+            .sidebar ul li{
+            border-bottom: none;
+        }
+        }
     </style>
 </head>
 <body>
