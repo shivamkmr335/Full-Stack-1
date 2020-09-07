@@ -13,7 +13,6 @@
     <style>
         *{
             font-family: Arial, Helvetica, sans-serif;
-
         }
         table tr:last-child td{
             border-bottom: none;
@@ -31,7 +30,6 @@
         tbody tr:hover{
             background-color: lightgrey;
         }
-
         th{
             text-align:left;
             padding:10px;
@@ -45,18 +43,14 @@
             border: 5px solid darkslategray;
             margin: 10px auto;
             width:85%;
-            border-bottom-right-radius: 10px;
-            border-bottom-left-radius: 10px;
-            border-spacing: 0px;      
+            border-radius: 10px;
+            border-spacing: 0px;  
+
         }
-        caption{
+        table tr:first-child th{
+            border-bottom: none;
             background-color: darkslategray;
-            width:100%;
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-            height: 40px;
-            line-height: 40px;
-            font-size: 20px;
+            text-align: center;
             color: white;
         }
         a{
@@ -70,8 +64,10 @@
 </head>
 <body>
     <table >
-        <caption>Full Stack Live Practical Book</caption>
         <thead>
+            <tr id="top">
+                <th colspan="5">Full Stack Live Practical Book</th>
+            </tr>
             <tr>
                 <th style="margin-left: 10px">#</th>
                 <th style="width:50%">Practical Name</th>
