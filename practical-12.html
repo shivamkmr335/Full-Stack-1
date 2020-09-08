@@ -1,17 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Practical-12</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <style>
-
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background-color: #4f8a8b;
+            color: black;
+            min-width: 100%;
+            height: 100%;
+        }
+        
+        .custom-table {
+            width: 60%;
+            padding: 5px 5px;
+            background-color: white;
+            margin: 50px auto;
+        }
+        
+        table {
+            background-color: whitesmoke;
+            width: 100%;
+            text-align: center;
+            padding: 100px;
+            border-collapse: collapse;
+        }
+        
+        td,
+        th {
+            width: 25%;
+            padding: 10px;
+            border-right: 2px solid white;
+            border-left: 2px solid white;
+        }
+        
+        tbody td:hover {
+            font-weight: bold;
+        }
+        
+        th {
+            height: 70px;
+            color: midnightblue;
+            font-size: 30px;
+        }
+        
+        th i {
+            font-size: 30px;
+            color: midnightblue;
+            margin-right: 10px;
+        }
+        
+        .starter {
+            background-color: #c1dcb7;
+        }
+        
+        .basic {
+            background-color: #bad6c8;
+        }
+        
+        .pro {
+            background-color: #bbd3dc;
+        }
+        
+        .ultimate {
+            background-color: #d5e4bc;
+        }
+        
+        caption {
+            color: black;
+            font-size: 25px;
+            background-color: white;
+            width:100%;
+        }
+        thead{
+            background-color: #a0c1b8;
+        }
+        tbody tr:nth-child(even)
+         {
+            background-color: #a0c1b8;
+        }
+        tbody tr:first-child{
+            font-size: 20px;
+            color: green;
+        }
+        tfoot{
+            background-color: #d3f1e2;
+        }
+        tfoot tr {
+            line-height: 60px;
+        }
+        
+        tfoot a {
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            background-color:midnightblue;
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            transition: .4s;
+        }
+        
+        tfoot a:hover {
+            background-color: black;
+            color: #9cada4;
+            font-weight: bolder;
+        }
     </style>
 </head>
-<body>
-    <table>
 
-    </table>
-    
+<body>
+
+    <div class="custom-table">
+        <table>
+            <caption>
+                <h2>Select Your Plan</h2>
+            </caption>
+            <colgroup class="starter"></colgroup>
+            <colgroup class="basic"></colgroup>
+            <colgroup class="pro"></colgroup>
+            <colgroup class="ultimate"></colgroup>
+            <thead>
+                <tr>
+                    <th>
+                        <i class="fa fa-building"></i>Basic
+                    </th>
+                    <th>
+                        <i class="fa fa-superpowers"></i>Plus
+                    </th>
+                    <th>
+                        <i class="fa fa-telegram"></i>Deluxe
+                    </th>
+                    <th>
+                        <i class="fa fa-tachometer"></i>Pro
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rs. 500/-</td>
+                    <td>Rs. 1500/-</td>
+                    <td>Rs. 2500/-</td>
+                    <td>Rs. 3500/-</td>
+                </tr>
+                <tr>
+                    <td>50 Pages</td>
+                    <td>75 Pages</td>
+                    <td>Unlimited</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>3 Users</td>
+                    <td>5 Users</td>
+                    <td>Unlimited</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>10 Sites</td>
+                    <td>50 Sites</td>
+                    <td>100 Sites</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>50 MB</td>
+                    <td>250 MB</td>
+                    <td>1 GB</td>
+                    <td>Unlimited</td>
+                </tr>
+
+                <tr>
+                    <td>Included</td>
+                    <td>Included</td>
+                    <td>Included</td>
+                    <td>Included</td>
+                </tr>
+                <tr>
+                    <td><img src="images/icon-check.png" alt="check"></td>
+                    <td><img src="images/icon-check.png" alt="check"></td>
+                    <td><img src="images/icon-check.png" alt="check"></td>
+                    <td><img src="images/icon-check.png" alt="check"></td>
+                </tr>                                                       
+                <tr>
+                    <td><img src="images/icon-x.png" alt="check"></td>
+                    <td><img src="images/icon-check.png" alt="check"></td>
+                    <td><img src="images/icon-check.png" alt="check"></td>
+                    <td><img src="images/icon-check.png" alt="check"></td>
+                </tr>
+                <tr>
+                    <td><img src="images/icon-x.png" alt="check"></td>
+                    <td><img src="images/icon-x.png" alt="check"></td>
+                    <td><img src="images/icon-check.png" alt="check"></td>
+                    <td><img src="images/icon-check.png" alt="check"></td>
+                </tr>
+                <tr>
+                    <td><img src="images/icon-x.png" alt="check"></td>
+                    <td><img src="images/icon-x.png" alt="check"></td>
+                    <td><img src="images/icon-x.png" alt="check"></td>
+                    <td><img src="images/icon-check.png" alt="check"></td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr class="links">
+                    <td><a href="#">Sign Up</a> </td>
+                    <td><a href="#">Sign Up</a></td>
+                    <td><a href="#">Sign Up</a></td>
+                    <td><a href="#">Sign Up</a></td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
 </body>
+
 </html>
