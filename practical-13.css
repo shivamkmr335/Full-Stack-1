@@ -282,7 +282,7 @@
         height:2px;
         display:block;
         right:35.9vw;
-        bottom:5px;
+        bottom:-28px;
         background-color: orangered;
         transition: 0.3s;
         align-self: center;
@@ -427,7 +427,7 @@
         height:2px;
         display:block;
         right:35.9vw;
-        bottom:5px;
+        bottom:-28px;
         background-color: orangered;
         transition: 0.3s;
         align-self: center;
