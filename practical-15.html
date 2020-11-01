@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: rgb(217, 255, 0);
+        }
+        h1{
+            font-size: 40px;
+            text-align: center;
+        }
+        .my-button{
+            width:60px;
+            height:60px;
+            font-size: 40px;
+        }
+        .mainn{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        #minus{
+             background-color: orange;
+        }
+        #plus{
+            background-color: green;
+        }
+        #textd{ 
+            padding:2px 10px;
+            font-size: 50px;
+            background-color: chartreuse;
+            margin: 0px 60px;
+            border: 2px solid rgb(12, 165, 132);
+        }
+</style>
+</head>
+<body>
+    <h1>COUNTER</h1>
+    <div class="mainn">
+        <button class="my-button" onclick="decrease()" id="minus">-</button>
+        <span id="textd">0</span>
+        <button class="my-button" onclick="increase()" id="plus">+</button>
+    </div>
+    <script>
+        var x=0;
+        document.getElementById("minus").disabled=true;
+        function increase() {
+            document.getElementById("minus").disabled = false;
+            x++;
+            document.getElementById("textd").innerHTML = x;
+            document.getElementById("minus").style.backgroundColor="red";
+        }   
+        function decrease() {
+            x--;
+            document.getElementById("textd").innerHTML = x;
+            if(x==0){
+                document.getElementById("minus").disabled = true;
+                document.getElementById("minus").style.backgroundColor="orange";
+            }
+        }
+   
+    </script>
+</body>
+</html>
