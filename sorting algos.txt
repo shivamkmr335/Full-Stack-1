@@ -9,3 +9,28 @@ def sort(num):
 num=[5,3,8,6,7,2]
 sort(num)
 print(num)
+
+
+
+
+Bootstrap:
+Bootstrap is a free and open-source framework for creating websites and web applications. It's the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+As the web evolves more and more toward responsive design, it can be a real challenge for web developers to keep up. Bootstrap can make things a whole lot easier. Bootstrap enables you to create responsive websites without you needing to do the "responsive" bit. Bootstrap takes care of that. 
+
+
+JavaScript:
+JavaScript was initially created to “make web pages alive”.
+
+The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads.
+
+Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run.
+
+In this aspect, JavaScript is very different from another language called Java.
+
+
+CSS:
+A CSS (cascading style sheet) file allows you to separate your web sites (X)HTML content from it’s style. As always you use your (X)HTML file to arrange the content, but all of the presentation (fonts, colors, background, borders, text formatting, link effects & so on…) are accomplished within a CSS.
+
+
+html:
+HTML stands for Hyper Text Markup Language. It is used to design web pages using markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. Markup language is used to define the text document within tag which defines the structure of web pages. This language is used to annotate (make notes for the computer) text so that a machine can understand it and manipulate text accordingly. Most of markup (e.g. HTML) languages are human readable. Language uses tags to define what manipulation has to be done on the text.
