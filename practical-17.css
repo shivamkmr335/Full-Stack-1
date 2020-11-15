@@ -14,7 +14,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: content-box;
-    background-color: aqua;
+    background-color: rgb(51, 2, 2);
 }
 
 #time{
@@ -53,8 +53,4 @@ h2{
 
         font-size: 30px;
     }
-}
-
-body{
-    background-image: url()
 }
